@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="以茶地景、茶業館與包種茶製作工序認識坪林茶業，整理訪者實用的茶文化閱讀脈絡。">
+    <meta name="theme-color" content="#24533a">
+    <title>坪林茶業文化 | 新北坪林區觀光</title>
+    <!-- 內嵌 favicon，避免在部署或本地管理時出現遺失檔案 -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='38%25' r='60%25'%3E%3Cstop offset='0%25' stop-color='%23f7d58d'/%3E%3Cstop offset='55%25' stop-color='%2391b86d'/%3E%3Cstop offset='100%25' stop-color='%2324533a'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='%23131f19'/%3E%3Ccircle cx='32' cy='28' r='14' fill='url(%23g)'/%3E%3Cpath d='M20 46c8-5 16-5 24 0' stroke='%235f97aa' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="./assets/js/site.js"></script>
+</head>
+<body data-page="tea">
+    <a class="skip-link" href="#main-content">跳到主要內容</a>
+
+    <div class="site-shell">
+        <!-- 目前顯示靜態：即使 JavaScript 尚未載入，也能直接顯示免責聲明 -->
+        <div class="notice-banner" data-disclaimer-banner>
+            <div class="notice-banner__inner">
+                <span class="notice-banner__pill">Notice</span>
+                <span>本網站僅為個人網頁程式開發練習用，非坪林區官方網站。</span>
+            </div>
+        </div>
+
+        <!-- Header 由腳本建立，可避免每個 HTML 手動同步導覽列內容 -->
+        <header class="site-header">
+            <div class="container site-header__inner" data-site-header></div>
+        </header>
+
+        <main id="main-content">
+            <!-- 茶業主視覺：讓茶業文化正式接入獨立頁面 -->
+            <section class="page-hero page-hero--tea">
+                <div class="container page-hero__grid">
+                    <div>
+                        <p class="hero__eyebrow">Tea Culture</p>
+                        <h1>茶業文化</h1>
+                        <p class="page-hero__lead">
+                            坪林的茶不只是一種飲品，更是結合了山川風土、百年製茶工藝與在地生活美學的文化結晶。從漫山翠綠的茶園梯田，到茶師布滿厚繭的手掌，每一瓣茶葉都訴說著這座山城與茶香共生的動人故事。
+                        </p>
+                    </div>
+
+                    <div class="page-hero__rule-card">
+                        <h2>本頁整理重點</h2>
+                        <ul class="hero-card__list">
+                            <li>
+                                <strong>地景探索</strong>
+                                <span>理解山坡茶園與北勢溪風土的恩賜，感受得天獨厚的風土之美。</span>
+                            </li>
+                            <li>
+                                <strong>茶香旅程</strong>
+                                <span>以茶業博物館與製茶工序為起點，深入茶鄉生活的靈魂。</span>
+                            </li>
+                            <li>
+                                <strong>生活品味</strong>
+                                <span>在慢旅行中體驗品茗、選物與在地職人生活，享受最純粹的療癒。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 茶業照片輪播：改用有授權實地照片建立視覺節奏 -->
+            <section class="section photo-showcase">
+                <div class="container">
+                    <div class="section-heading photo-showcase__heading">
+                        <p class="section-label">茶鄉實景</p>
+                        <h2>走入翠綠深處，感受指尖的茶香溫度</h2>
+                        <p>
+                            當您親自造訪這片土地，茶山山谷的薄霧、百年博物館的紅磚，以及老街茶行的陣陣烘焙香，將帶領您一步步走入茶鄉的靈魂深處。
+                        </p>
+                    </div>
+
+                    <div class="photo-gallery">
+                        <figure class="photo-frame photo-frame--featured">
+                            <div class="photo-placeholder photo-placeholder--tea">
+                                <img class="photo-image" src="./assets/images/photos/tea_plantation_pinglin.jpg" alt="坪林茶山梯田實地照片" loading="lazy">
+                                <span class="photo-placeholder__label">坪林山谷茶景</span>
+                            </div>
+                            <figcaption class="photo-caption">連綿不絕的翠綠茶山梯田，繪製出台灣茶鄉最美麗的幾何線條與風土樣貌。圖：Bernard Gagnon / Wikimedia Commons。</figcaption>
+                        </figure>
+
+                        <figure class="photo-frame">
+                            <div class="photo-placeholder photo-placeholder--museum">
+                                <img class="photo-image" src="./assets/images/photos/tea_processing_machine.jpg" alt="望月型揉捻機實地照片" loading="lazy">
+                                <span class="photo-placeholder__label">望月型揉捻機</span>
+                            </div>
+                            <figcaption class="photo-caption">日治時期引進的望月型揉捻機，是促成包種茶條索狀形塑與滋味釋放的關鍵工藝機具。圖：望月型揉捻機 / Wikimedia Commons。</figcaption>
+                        </figure>
+
+                        <figure class="photo-frame">
+                            <div class="photo-placeholder photo-placeholder--street">
+                                <img class="photo-image" src="./assets/images/photos/pouchong_tea_leaves.jpg" alt="文山包種茶葉特寫照片" loading="lazy">
+                                <span class="photo-placeholder__label">文山包種茶乾</span>
+                            </div>
+                            <figcaption class="photo-caption">在精緻茶盒中烘焙完成的條索狀文山包種茶乾，散發出優雅的自然花香。圖：Massimiliano Kovalenko / Unsplash。</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 茶業亮點：設計未來獨立段落的子項目基礎 -->
+            <section class="section section--light">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="section-label">茶文化主題</p>
+                        <h2>探尋茶鄉靈魂：三大不容錯過的茶文化體驗</h2>
+                    </div>
+
+                    <div class="card-grid card-grid--highlights">
+                        <article class="feature-card">
+                            <p class="feature-card__index">01</p>
+                            <h3>包種茶地景</h3>
+                            <p>
+                                坪林的包種茶與山谷地形密切相連，理解地景之後，才能把季節變化與產區條件往下擴寫。
+                            </p>
+                        </article>
+
+                        <article class="feature-card">
+                            <p class="feature-card__index">02</p>
+                            <h3>製茶工序</h3>
+                            <p>
+                                包種茶製程涵蓋採摘、日光萎凋、室內萎凋、浪菁、發酵、殺青、揉捻與乾燥等工序，每個步驟都決定最後的口感層次。
+                            </p>
+                        </article>
+
+                        <article class="feature-card">
+                            <p class="feature-card__index">03</p>
+                            <h3>茶飲與在地文化</h3>
+                            <p>
+                                茶文化在坪林不只存在於館舍與工坊裡，也延續在老街茶行、品茗空間與地方待客方式之中。
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="section-label">製茶工序</p>
+                        <h2>包種茶的關鍵工序</h2>
+                        <p>
+                            坪林包種茶的清香不是單一步驟決定的，而是從採摘到乾燥每一道工序累積出來的。
+                            如果想更完整理解包種茶，可以先掌握住這八個步驟。
+                        </p>
+                    </div>
+
+                    <div class="card-grid card-grid--highlights">
+                        <article class="feature-card">
+                            <p class="feature-card__index">01</p>
+                            <h3>採摘</h3>
+                            <p>採取嫩葉，以一心二葉或一心三葉為主要標準，決定原料品質與後製的香氣方向。</p>
+                        </article>
+
+                        <article class="feature-card">
+                            <p class="feature-card__index">02</p>
+                            <h3>日光萎凋</h3>
+                            <p>將採下的茶葉放於日光下，使茶葉水分適度散失，啟動氧化反應，是製茶工序的第一步。</p>
+                        </article>
+
+                        <article class="feature-card">
+                            <p class="feature-card__index">03</p>
+                            <h3>室內萎凋</h3>
+                            <p>移至室內靜置，在適當的溫濕度控制下穩定萎凋，形成細緻的香氣前驅物。</p>
+                        </article>
+
+                        <article class="feature-card">
+                            <p class="feature-card__index">04</p>
+                            <h3>浪菁</h3>
+                            <p>以手翻炒茶葉再靜置，促進葉緣氧化，是包種茶製程中最關鍵的循環性操作步驟。</p>
+                        </article>
+
+                        <article class="feature-card">
+                            <p class="feature-card__index">05</p>
+                            <h3>發酵</h3>
+                            <p>在適當環境讓茶葉進行輕度發酵，逐步形成包種茶的清雅花香與滑順口感。</p>
+                        </article>
+
+                        <article class="feature-card">
+                            <p class="feature-card__index">06</p>
+                            <h3>殺青</h3>
+                            <p>以高溫快速終止發酵，鎖住香氣與風味走向。火候的精準度直接影響茶湯的清爽程度。</p>
+                        </article>
+
+                        <article class="feature-card">
+                            <p class="feature-card__index">07</p>
+                            <h3>揉捻</h3>
+                            <p>壓力揉捻讓茶汁滲出、茶葉捲曲，一步步塑造包種茶條索外形，也讓茶汁更易釋出。</p>
+                        </article>
+
+                        <article class="feature-card">
+                            <p class="feature-card__index">08</p>
+                            <h3>乾燥</h3>
+                            <p>以乾燥程序除去剩餘水分，讓茶葉穩定保存，完成可存放、可沖泡的包種茶成品。</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 茶業延伸：提供下一步可繼續的詳細頁與首頁連結 -->
+            <section class="section">
+                <div class="container content-grid">
+                    <article class="content-card">
+                        <p class="section-label">旅人隨筆</p>
+                        <h2>「茶香裊裊，時間在此慢了下來。」</h2>
+                        <p>
+                            在坪林，最好的旅行步調就是沒有步調。點一壺茶，聽製茶師聊聊當季茶葉的採收與精製，
+                            或是坐在溪畔聽水聲，讓包種茶的清香在口中慢慢化開，感受最純粹的療癒時光。
+                        </p>
+                    </article>
+
+                    <article class="content-card">
+                        <p class="section-label">實用漫遊指南</p>
+                        <h2>開啟您的尋香之旅</h2>
+                        <ul class="content-list">
+                            <li>
+                                <strong>最佳造訪時段</strong>
+                                <p>推薦於春茶（4 月至 5 月）與冬茶（10 月至 11 月）採收季造訪，此時全鎮茶行皆會飄散著烘茶的溫暖清香，還能見到曬茶地景。</p>
+                            </li>
+                            <li>
+                                <strong>不可錯過亮點</strong>
+                                <p>造訪全台最美的「坪林茶業博物館」深度了解風土，再前往老街品嘗一口在地包種茶拿鐵或茶香豆腐。</p>
+                            </li>
+                        </ul>
+                        <div class="content-actions">
+                            <a class="button button--primary" href="./tea-museum.html">前往茶業博物館</a>
+                            <a class="button button--secondary" href="./cafes.html">尋訪在地特色茶館</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer 同樣補入靜態後備內容，確保免責聲明依賴腳本 -->
+        <footer class="site-footer" data-site-footer>
+            <div class="footer-card">
+                <div class="footer-card__disclaimer">本網站僅為個人網頁程式開發練習用，非坪林區官方網站。</div>
+            </div>
+        </footer>
+    </div>
+
+    <noscript>
+        <div class="noscript-note">此網站需要共用瀏覽腳本，請啟用 JavaScript 以獲得完整體驗。</div>
+    </noscript>
+</body>
+</html>

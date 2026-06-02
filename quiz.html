@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="挑戰高質感的坪林茶知識與生態保育問答，從製茶工序、茶葉特色到北勢溪護魚政策，測試您的茶鄉達人指數。">
+    <meta name="referrer" content="no-referrer">
+    <meta name="theme-color" content="#24533a">
+    <title>茶學知識問答挑戰 | 新北坪林區觀光</title>
+    <!-- 內嵌 favicon，與捕螢小遊戲一致 -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='38%25' r='60%25'%3E%3Cstop offset='0%25' stop-color='%23f7d58d'/%3E%3Cstop offset='55%25' stop-color='%2391b86d'/%3E%3Cstop offset='100%25' stop-color='%2324533a'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='%23131f19'/%3E%3Ccircle cx='32' cy='28' r='14' fill='url(%23g)'/%3E%3Cpath d='M20 46c8-5 16-5 24 0' stroke='%235f97aa' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./assets/css/style.css?v=2">
+    <link rel="stylesheet" href="./assets/css/quiz.css?v=2">
+    <script defer src="./assets/js/site.js?v=2"></script>
+    <script defer src="./assets/js/quiz.js?v=2"></script>
+</head>
+<body data-page="quiz">
+    <a class="skip-link" href="#main-content">跳到主要內容</a>
+
+    <div class="site-shell site-shell--quiz">
+        <!-- 頁面頂端免責聲明，與捕螢小遊戲及首頁完全一致 -->
+        <div class="notice-banner" data-disclaimer-banner>
+            <div class="notice-banner__inner">
+                <span class="notice-banner__pill">Notice</span>
+                <span>本網站僅為個人網頁程式開發練習用，非坪林區官方網站。</span>
+            </div>
+        </div>
+
+        <!-- 共用導覽列由 site.js 統一管理並渲染 -->
+        <header class="site-header">
+            <div class="container site-header__inner" data-site-header></div>
+        </header>
+
+        <main id="main-content">
+            <!-- 頁面主視覺：介紹問答主題與趣味引導 -->
+            <section class="page-hero page-hero--game">
+                <div class="container page-hero__grid" style="grid-template-columns: 1fr;">
+                    <div style="text-align: center; max-width: 48rem; margin: 0 auto;">
+                        <p class="hero__eyebrow">Interactive Quiz</p>
+                        <h1>茶學知識問答挑戰</h1>
+                        <p class="page-hero__lead">
+                            歡迎來到茶知識講堂！坪林作為百年包種茶的故鄉與雙北地區重要的水源生態保護區，孕育了深厚的人文底蘊與乾淨的自然棲地。本問答共隨機抽取 5 題，測試您對製茶工藝、茶品香氣與河川生態的暸解程度，並為您推薦最契合的慢遊行程。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 問答核心卡片場域 -->
+            <section class="section quiz-layout">
+                <div class="container">
+                    <div id="quiz-area" class="quiz-card" aria-live="polite" aria-label="茶學問答區域">
+                        <!-- 由 quiz.js 動態注入問答結構，noscript 用於提供降級支持 -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 共用頁尾由 site.js 統一渲染，包含免責聲明 -->
+        <footer class="site-footer" data-site-footer>
+            <div class="footer-card">
+                <div class="footer-card__disclaimer">本網站僅為個人網頁程式開發練習用，非坪林區官方網站。</div>
+            </div>
+        </footer>
+    </div>
+
+    <noscript>
+        <div class="noscript-note">此頁面需要啟用 JavaScript 才能進行茶學知識問答。</div>
+    </noscript>
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="新北坪林觀光導覽，走訪翠綠茶鄉、百年老街、清澈親水溪谷與季節限定夏夜賞螢秘境。">
+    <meta name="referrer" content="no-referrer">
+    <meta name="theme-color" content="#24533a">
+    <title>山水茶鄉 慢活坪林 | 新北坪林區觀光</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='38%25' r='60%25'%3E%3Cstop offset='0%25' stop-color='%23f7d58d'/%3E%3Cstop offset='55%25' stop-color='%2391b86d'/%3E%3Cstop offset='100%25' stop-color='%2324533a'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='%23131f19'/%3E%3Ccircle cx='32' cy='28' r='14' fill='url(%23g)'/%3E%3Cpath d='M20 46c8-5 16-5 24 0' stroke='%235f97aa' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./assets/css/style.css?v=2">
+    <script defer src="./assets/js/site.js?v=2"></script>
+</head>
+<body data-page="home">
+    <a class="skip-link" href="#main-content">跳到主要內容</a>
+
+    <div class="site-shell">
+        <div class="notice-banner" data-disclaimer-banner>
+            <div class="notice-banner__inner">
+                <span class="notice-banner__pill">Notice</span>
+                <span>本網站僅為個人網頁程式開發練習用，非坪林區官方網站。</span>
+            </div>
+        </div>
+
+        <header class="site-header">
+            <div class="container site-header__inner" data-site-header></div>
+        </header>
+
+        <main id="main-content">
+            <!-- 季節感 Hero Section：由 JS 自動注入微光粒子並在切換時重繪文字與背景 -->
+            <section class="hero" data-season="spring">
+                <div class="container hero__grid">
+                    <div class="hero__content reveal-on-load">
+                        <p class="hero__eyebrow">Pinglin Tea Valley</p>
+                        <h1 data-season-title>山城清芬，歲月靜好</h1>
+                        <p class="hero__lead" data-season-lead>
+                            漫步於雲霧繚繞的綠意茶園，深吸一口屬於坪林的包種茶香。文山包種茶的製茶脈絡、坪林老街的溫潤街屋，以及北勢溪沿岸的慢活散步步調，共同交織出山城最靜好的時光。讓我們在春日出發，探尋茶香的發源地，重新尋回內心的平靜與從容。
+                        </p>
+                        
+                        <div class="hero__actions">
+                            <a class="button button--primary" href="#highlights">探索體驗路線</a>
+                            
+                            <div class="season-switch" data-season-switch>
+                                <button class="season-chip is-active" type="button" data-season-value="spring" aria-pressed="true">春茶</button>
+                                <button class="season-chip" type="button" data-season-value="summer" aria-pressed="false">夏溪</button>
+                                <button class="season-chip" type="button" data-season-value="firefly" aria-pressed="false">夜螢</button>
+                            </div>
+                            <p class="season-switch__note" data-season-note>春季以茶園與製茶文化為主軸，適合安排茶業博物館與老街的茶香散策之旅。</p>
+                        </div>
+                    </div>
+
+                    <aside class="hero-card reveal-on-load reveal-on-load--delay">
+                        <h2>建議行程節奏</h2>
+                        <ul class="hero-card__list">
+                            <li>
+                                <strong>慢活山城一日</strong>
+                                <span>上午探索茶博館歷史，中午漫步老街品味茶餐，下午沿觀魚步道散心。</span>
+                            </li>
+                            <li>
+                                <strong>溪水避暑提案</strong>
+                                <span>炎夏時節，將行程留白給觀魚步道的清涼微風與水畔茶景咖啡廳。</span>
+                            </li>
+                            <li>
+                                <strong>夜間追光觀察</strong>
+                                <span>暮色降臨後，在無光害的北勢溪畔，溫柔守護點點閃爍的夏夜螢火。</span>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <div class="container route-grid">
+                    <article class="route-step" data-reveal>
+                        <p class="route-step__time">上午</p>
+                        <h3>茶業館起點</h3>
+                        <p>以典雅的茶業博物館為首站，在沈浸式美學空間中，認識包種茶與地方產業的核心歷史與傳承脈絡。</p>
+                    </article>
+
+                    <article class="route-step" data-reveal>
+                        <p class="route-step__time">中午</p>
+                        <h3>老街漫走</h3>
+                        <p>轉進極富煙火氣的坪林老街，在砂岩街屋與百年石屋間慢行，品嚐特色茶便當與在地茶食，感受山城的慢調人情。</p>
+                    </article>
+
+                    <article class="route-step" data-reveal>
+                        <p class="route-step__time">下午</p>
+                        <h3>溪畔步道</h3>
+                        <p>漫步於清澈見底的北勢溪畔觀魚步道，享受微風拂面與成群銀魚閃爍，在水岸綠廊間完成心靈的悠閒轉場。</p>
+                    </article>
+
+                    <article class="route-step" data-reveal>
+                        <p class="route-step__time">傍晚</p>
+                        <h3>夜色賞螢</h3>
+                        <p>若天候適宜，在暮色低垂時，步入無光害的觀魚步道，親眼目睹成千上萬金色螢光在樹梢與水畔翩翩起舞。</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 三大旅遊軸線 -->
+            <section id="highlights" class="section section--light">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="section-label">三大旅遊軸線</p>
+                        <h2>以茶香、人文與溪谷三條軸線，認識坪林的山城面貌</h2>
+                        <p>
+                            坪林的旅遊體驗可歸納為茶產業文化、老街人文聚落與北勢溪親水廊道三大軸線。掌握這三條主軸的特色與動線，有助於規劃出更具深度與節奏的坪林一日遊程。
+                        </p>
+                    </div>
+
+                    <div class="card-grid card-grid--highlights">
+                        <article class="feature-card" data-reveal>
+                            <figure class="card-photo">
+                                <div class="card-photo__media">
+                                    <img class="card-photo__image" src="./assets/images/photos/tea_plantation.jpg" alt="坪林茶山山谷實拍照片" loading="lazy">
+                                    <span class="card-photo__label">茶香山城</span>
+                                </div>
+                                <figcaption class="card-photo__caption">圖：lienyuan lee / Wikimedia Commons，CC BY 3.0。</figcaption>
+                            </figure>
+                            <p class="feature-card__index">01</p>
+                            <h3>茶香山城</h3>
+                            <p>
+                                坪林最核心的靈魂印記非茶莫屬。沿著蜿蜒的北勢溪谷與茶青公路盤旋而上，迎接您的是滿山遍野的翠綠茶園與空氣中淡淡飄散的清新茶香。從山谷間層疊的茶褶、保留百年傳統手作製茶技藝的在地茶行，到全國唯一的茶業博物館，這條主線將帶領您親自見證包種茶從一片鮮綠葉片到一杯甘醇茶湯的奇妙旅程，最適合做為您開啟坪林慢旅的第一站，在裊裊茶香中沉澱都市的浮躁。
+                            </p>
+                            <ul class="feature-card__highlights">
+                                <li><span class="hl-icon">🍃</span>走訪茶園與在地茶行，親歷萎凋、浪菁、殺菁等傳統手作製茶工序</li>
+                                <li><span class="hl-icon">🏛</span>參觀全臺唯一的茶業博物館，認識包種茶的百年產業脈絡</li>
+                                <li><span class="hl-icon">🍵</span>品飲當季包種茶與蜜香紅茶，感受茶湯的花香與喉韻</li>
+                            </ul>
+                            <div class="feature-card__pills">
+                                <a class="pill-link" href="./tea-museum.html">茶業博物館</a>
+                                <a class="pill-link" href="./tea.html">茶業文化專頁</a>
+                                <a class="pill-link" href="./old-street.html">坪林老街茶行</a>
+                            </div>
+                        </article>
+
+                        <article class="feature-card" data-reveal>
+                            <figure class="card-photo">
+                                <div class="card-photo__media">
+                                    <img class="card-photo__image" src="./assets/images/photos/pinglin_old_street.jpg" alt="坪林老街另一個角度的實拍照片" loading="lazy">
+                                    <span class="card-photo__label">老街人文</span>
+                                </div>
+                                <figcaption class="card-photo__caption">圖：lienyuan lee / Wikimedia Commons，CC BY 3.0。</figcaption>
+                            </figure>
+                            <p class="feature-card__index">02</p>
+                            <h3>老街人文</h3>
+                            <p>
+                                穿過熱鬧的現代街道，走進坪林老街，時間彷彿溫柔地慢了下來。這條散發著悠悠歲月光澤的古老街廓中，保留著當地獨有的砂岩老屋與精緻的閩南紅磚街屋。兩旁坐落著數十年如一日的傳統老茶行與充滿創意的文青茶空間。在這裡，您可以漫步石板路上，與親切的在地茶師圍坐品茗、話家常，品嚐茶香饅頭與創意豆腐冰淇淋，感受最純粹的茶鄉溫度。
+                            </p>
+                            <ul class="feature-card__highlights">
+                                <li><span class="hl-icon">🏘</span>漫步砂岩石屋與閩南紅磚街廓，感受百年建築肌理</li>
+                                <li><span class="hl-icon">🫖</span>走訪傳統老茶行與文青茶空間，體驗新舊交融的品茗氛圍</li>
+                                <li><span class="hl-icon">🍡</span>品嚐茶香饅頭、茶油麵線、豆腐冰淇淋等在地茶食與小吃</li>
+                            </ul>
+                            <div class="feature-card__pills">
+                                <a class="pill-link" href="./old-street.html">坪林老街</a>
+                                <a class="pill-link" href="./cafes.html">在地咖啡廳</a>
+                            </div>
+                        </article>
+
+                        <article class="feature-card" data-reveal>
+                            <figure class="card-photo">
+                                <div class="card-photo__media">
+                                    <img class="card-photo__image" src="./assets/images/photos/suspension_bridge.jpg" alt="坪林親水吊橋與溪畔步道實拍照片" loading="lazy">
+                                    <span class="card-photo__label">溪橋慢行</span>
+                                </div>
+                                <figcaption class="card-photo__caption">圖：lienyuan lee / Wikimedia Commons，CC BY 3.0。</figcaption>
+                            </figure>
+                            <p class="feature-card__index">03</p>
+                            <h3>溪橋慢行</h3>
+                            <p>
+                                碧綠清透的北勢溪如一條翡翠絲帶，溫柔地抱著這座翠綠的山城。矗立於溪流之上的親水吊橋，擁有眺望澄澈水色與成群游魚的最佳視野。沿著水岸修築的平緩步道綠樹成蔭、空氣清甜，是最適合午後悠閒漫步的林蔭走廊。在這裡，您可以傾聽溪水的潺潺低吟與山林的蟲鳴鳥囀，順道探訪水畔的景觀茶坊，讓清新的微風帶走累積已久的緊繃與焦慮。
+                            </p>
+                            <ul class="feature-card__highlights">
+                                <li><span class="hl-icon">🌊</span>漫步觀魚步道，觀賞護魚政策下清澈溪水中大量苦花與溪哥群游</li>
+                                <li><span class="hl-icon">🌉</span>走上坪林親水吊橋，飽覽北勢溪碧綠水色與兩岸翠綠山景</li>
+                                <li><span class="hl-icon">☕</span>行程尾聲至溪畔景觀咖啡廳休憩，享受山風與水聲環繞的午後茶時光</li>
+                            </ul>
+                            <div class="feature-card__pills">
+                                <a class="pill-link" href="./fish-viewing-trail.html">觀魚步道</a>
+                                <a class="pill-link" href="./jingualiao-trail.html">金瓜寮步道</a>
+                                <a class="pill-link" href="./cafes.html">溪畔咖啡廳</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 代表性景點導覽 -->
+            <section id="attractions" class="section attractions-section">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="section-label">代表性景點</p>
+                        <h2>五處最具代表性的坪林景點，涵蓋館舍、街區、步道與花季</h2>
+                        <p>
+                            以下精選坪林地區最受旅人青睞的五個景點，依「館舍體驗」「人文街區」「親水步道」「山林健行」「季節花景」五大類型分別推薦，便於依個人偏好與停留時間安排遊程。
+                        </p>
+                    </div>
+
+                    <div class="attraction-grid">
+                        <article class="attraction-card" data-reveal>
+                            <figure class="card-photo">
+                                <div class="card-photo__media">
+                                    <img class="card-photo__image" src="./assets/images/photos/tea_museum.jpg" alt="坪林茶業博物館外觀實拍照片" loading="lazy">
+                                    <span class="card-photo__label">館舍起點</span>
+                                </div>
+                                <figcaption class="card-photo__caption">圖：lienyuan lee / Wikimedia Commons，CC BY 3.0。</figcaption>
+                            </figure>
+                            <div class="attraction-card__header">
+                                <span class="attraction-card__tag">茶業館舍</span>
+                                <span class="attraction-card__time">建議 60-90 分鐘</span>
+                            </div>
+                            <h3>坪林茶業博物館</h3>
+                            <p class="attraction-card__intro">
+                                這座閩南四合院風格的優雅建築，隱身於蓊鬱山林與北勢溪畔。館內不僅展示了坪林傳承百年的種茶工序與茶道歷史，更透過現代極簡美學與沈浸式展覽，將茶文化轉化為五感的當代饗宴。
+                            </p>
+                            <p class="attraction-card__tip">非常適合作為旅程起點，在精緻典雅的東方美學空間中，建立對地方茶文化的脈絡理解。</p>
+                            <div class="attraction-card__info">
+                                <div class="attraction-card__info-row"><span class="info-icon">📍</span>位於坪林區水德村，自國道五號坪林區公所旁左轉即可抵達</div>
+                                <div class="attraction-card__info-row"><span class="info-icon">👥</span>適合文化愛好者、親子家庭、室內行程規劃的旅人</div>
+                            </div>
+                            <a class="detail-link" href="./tea-museum.html">查看詳頁</a>
+                        </article>
+
+                        <article class="attraction-card" data-reveal>
+                            <figure class="card-photo">
+                                <div class="card-photo__media">
+                                    <img class="card-photo__image" src="./assets/images/photos/pinglin_old_street.jpg" alt="坪林老街街景實拍照片" loading="lazy">
+                                    <span class="card-photo__label">街區步行</span>
+                                </div>
+                                <figcaption class="card-photo__caption">圖：lienyuan lee / Wikimedia Commons，CC BY 3.0。</figcaption>
+                            </figure>
+                            <div class="attraction-card__header">
+                                <span class="attraction-card__tag">老街街區</span>
+                                <span class="attraction-card__time">建議 30-45 分鐘</span>
+                            </div>
+                            <h3>坪林老街</h3>
+                            <p class="attraction-card__intro">
+                                環繞著當地信仰中心「保坪宮」展開的百年老街，處處保留著樸實溫潤的舊時光。這裡沒有過度的商業色彩，只有最日常的茶香人文、古老街屋與慢步調的茶鄉生活，讓人隨意駐足。
+                            </p>
+                            <p class="attraction-card__tip">適合喜愛悠閒漫步、尋訪石屋建築紋理，以及品嚐在地特色茶點與茶便當的慢遊者。</p>
+                            <div class="attraction-card__info">
+                                <div class="attraction-card__info-row"><span class="info-icon">📍</span>位於坪林區坪林街，保坪宮周邊即為老街核心區域</div>
+                                <div class="attraction-card__info-row"><span class="info-icon">👥</span>適合嗜好人文建築、小吃探索與慢遊襲的旅人</div>
+                            </div>
+                            <a class="detail-link" href="./old-street.html">查看詳頁</a>
+                        </article>
+
+                        <article class="attraction-card" data-reveal>
+                            <figure class="card-photo">
+                                <div class="card-photo__media">
+                                    <img class="card-photo__image" src="./assets/images/photos/suspension_bridge.jpg" alt="北勢溪與吊橋實拍照片" loading="lazy">
+                                    <span class="card-photo__label">溪畔散步</span>
+                                </div>
+                                <figcaption class="card-photo__caption">圖：lienyuan lee / Wikimedia Commons，CC BY 3.0。</figcaption>
+                            </figure>
+                            <div class="attraction-card__header">
+                                <span class="attraction-card__tag">親水步道</span>
+                                <span class="attraction-card__time">建議 45-60 分鐘</span>
+                            </div>
+                            <h3>觀魚步道</h3>
+                            <p class="attraction-card__intro">
+                                這是一條與北勢溪溫柔並行的親水走廊。由於當地護魚政策成果斐然，清澈見底的溪水中隨處可見成群游魚在陽光下閃耀銀白光芒。漫步於平緩舒適的棧道上，能近距離感受溪谷的清涼與舒暢。
+                            </p>
+                            <p class="attraction-card__tip">步道坡度極為平緩，非常適合全家大小攜手共遊，用最從容的步伐洗滌身心。</p>
+                            <div class="attraction-card__info">
+                                <div class="attraction-card__info-row"><span class="info-icon">📍</span>位於坪林區北勢溪沿岸，自坪林茶業博物館步行約 5 分鐘即可抵達</div>
+                                <div class="attraction-card__info-row"><span class="info-icon">👥</span>適合親子家庭、長輩同行、喜愛親水與生態觀察的旅人</div>
+                            </div>
+                            <a class="detail-link" href="./fish-viewing-trail.html">查看詳頁</a>
+                        </article>
+
+                        <article class="attraction-card" data-reveal>
+                            <figure class="card-photo">
+                                <div class="card-photo__media">
+                                    <img class="card-photo__image" src="./assets/images/photos/jingualiao_creek.jpg" alt="金瓜寮溪實拍照片" loading="lazy">
+                                    <span class="card-photo__label">溪谷山林</span>
+                                </div>
+                                <figcaption class="card-photo__caption">圖：lienyuan lee / Wikimedia Commons，CC BY 3.0。</figcaption>
+                            </figure>
+                            <div class="attraction-card__header">
+                                <span class="attraction-card__tag">山區步道</span>
+                                <span class="attraction-card__time">建議 60-90 分鐘</span>
+                            </div>
+                            <h3>金瓜寮魚蕨步道</h3>
+                            <p class="attraction-card__intro">
+                                這是一處隱身於溪谷深處的綠色秘境，因擁有極為茂密多樣的史前蕨類地景而聞名。步道沿著潺潺清溪而建，沿途被無盡的翠綠植被遮蔭，空氣濕潤清新，彷彿走進宮崎駿筆下的森林世界。
+                            </p>
+                            <p class="attraction-card__tip">適合喜愛溪谷健行、大自然攝影，想尋求一場深度芬多精洗禮的生態愛好者。</p>
+                            <div class="attraction-card__info">
+                                <div class="attraction-card__info-row"><span class="info-icon">📍</span>位於坪林區金瓜寮溪沿線，需驅車前往，自坪林市區約 10 分鐘車程</div>
+                                <div class="attraction-card__info-row"><span class="info-icon">👥</span>適合山林健行愛好者、生態攝影與戶外探索旅人</div>
+                            </div>
+                            <a class="detail-link" href="./jingualiao-trail.html">查看詳頁</a>
+                        </article>
+
+                        <article class="attraction-card" data-reveal>
+                            <figure class="card-photo">
+                                <div class="card-photo__media">
+                                    <img class="card-photo__image" src="./assets/images/photos/tung_blossoms.jpg" alt="新北山區油桐花實拍照片" loading="lazy">
+                                    <span class="card-photo__label">五月花季</span>
+                                </div>
+                                <figcaption class="card-photo__caption">圖：Vengolis / Wikimedia Commons，CC BY-SA 3.0。</figcaption>
+                            </figure>
+                            <div class="attraction-card__body">
+                                <div class="attraction-card__header">
+                                    <span class="attraction-card__tag">季節賞花</span>
+                                    <span class="attraction-card__time">四、五月間最佳</span>
+                                </div>
+                                <h3>油桐花飛雪</h3>
+                                <p class="attraction-card__intro">
+                                    每年四、五月春夏之交，步道兩側茂密的油桐樹梢便會綻放出如瑞雪般的白花。隨風飄落的白透花瓣鋪滿了古老的木棧道，與周邊的青綠茶園交映成趣，是季節限定的極致浪漫地景。
+                                </p>
+                                <p class="attraction-card__tip">適合春末夏初造訪，是喜愛山林花毯、人像外拍與自然花卉攝影者的夢幻造訪期。</p>
+                                <div class="attraction-card__info">
+                                    <div class="attraction-card__info-row"><span class="info-icon">📍</span>主要觀賞區域在水柳腳步道、金瓜寮溪沿線，位於坪林區山區步道系統</div>
+                                    <div class="attraction-card__info-row"><span class="info-icon">👥</span>適合賞花愛好者、人像外拍、山林健行與自然攝影旅人</div>
+                                </div>
+                                <a class="detail-link" href="./tung-blossom.html">查看詳頁</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <p class="practical-note">本頁景點資訊僅供行程規劃參考，各景點開放時段、票價與活動安排可能因季節或現場狀況調整，實際資訊請以現場公告為準。最新官方公告請參閱 <a href="https://www.pinglin.ntpc.gov.tw/" target="_blank" rel="noopener noreferrer">新北市坪林區公所</a> 網站。</p>
+                </div>
+            </section>
+
+            <!-- 四季遊程規劃建議 -->
+            <section class="section section--light">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="section-label">四季遊程建議</p>
+                        <h2>依季節特色安排行程，體驗坪林最豐富的山城風貌</h2>
+                        <p>
+                            坪林四季各有不同的自然景致與體驗主題：春季品嚐頭春包種茶、初夏追逐油桐花飛雪、盛夏漫步清涼溪畔步道、秋冬靜賞山谷雲霧。以下依時序推薦適合的遊程方向，協助您挑選最佳造訪時機。
+                        </p>
+                    </div>
+
+                    <div class="card-grid card-grid--seasonal">
+                        <article class="feature-card" data-reveal>
+                            <figure class="card-photo">
+                                <div class="card-photo__media">
+                                    <img class="card-photo__image" src="./assets/images/photos/tea_plantation.jpg" alt="坪林茶園翠綠梯田實地景緻" loading="lazy">
+                                    <span class="card-photo__label">春茶上山</span>
+                                </div>
+                                <figcaption class="card-photo__caption">圖：lienyuan lee / Wikimedia Commons，CC BY 3.0。</figcaption>
+                            </figure>
+                            <p class="feature-card__index">春</p>
+                            <h3>春茶上山</h3>
+                            <p>
+                                春季是坪林包種茶的黃金採製期，茶園嫩芽初綻、空氣中瀰漫著清新草青香。建議先至坪林茶業博物館認識製茶工序與產業歷史，再轉往老街茶行品飲當季頭春包種茶，從產地到杯中完整感受茶鄉的核心魅力。
+                            </p>
+                            <p class="feature-card__best-time">✨ 最佳造訪：3 月中旬至 5 月（春茶產季）</p>
+                            <ul class="feature-card__itinerary">
+                                <li><span class="step-num">1</span>上午參觀茶業博物館，了解包種茶製程與地方產業歷史</li>
+                                <li><span class="step-num">2</span>中午漫步老街，品嚐茶食午餐與在地茶點</li>
+                                <li><span class="step-num">3</span>下午至老街茶行或茶空間品飲當季頭春包種茶</li>
+                            </ul>
+                            <div class="feature-card__itinerary-pills">
+                                <a class="pill-link" href="./tea-museum.html">茶業博物館</a>
+                                <a class="pill-link" href="./old-street.html">坪林老街</a>
+                                <a class="pill-link" href="./tea.html">茶業文化</a>
+                            </div>
+                        </article>
+
+                        <article class="feature-card" data-reveal>
+                            <figure class="card-photo">
+                                <div class="card-photo__media">
+                                    <img class="card-photo__image" src="./assets/images/photos/tung_blossoms.jpg" alt="油桐花淺景深實地照片" loading="lazy">
+                                    <span class="card-photo__label">桐花飛雪</span>
+                                </div>
+                                <figcaption class="card-photo__caption">圖：Vengolis / Wikimedia Commons，CC BY-SA 3.0。</figcaption>
+                            </figure>
+                            <p class="feature-card__index">夏</p>
+                            <h3>桐花飛雪</h3>
+                            <p>
+                                每年四至五月春夏之交，坪林山區的油桐樹梢盛開如雪般的潔白花朵，飄落的花瓣鋪滿步道與茶園小徑，形成獨特的「五月雪」地景。水柳腳步道與金瓜寮溪沿線為主要觀賞區域，花期約持續三至四週，適合安排半日賞花健行。
+                            </p>
+                            <p class="feature-card__best-time">🌸 最佳造訪：4 月中旬至 5 月下旬（油桐花季）</p>
+                            <ul class="feature-card__itinerary">
+                                <li><span class="step-num">1</span>上午前往水柳腳步道，欣賞步道兩側盛開的油桐花海</li>
+                                <li><span class="step-num">2</span>沿金瓜寮溪慢行，拍攝花瓣鋪滿渓流的浪漫景線</li>
+                                <li><span class="step-num">3</span>下午返回老街吃茶食午餐，休憩後漫遊周邊茶園</li>
+                            </ul>
+                            <div class="feature-card__itinerary-pills">
+                                <a class="pill-link" href="./tung-blossom.html">油桐花賞景</a>
+                                <a class="pill-link" href="./jingualiao-trail.html">金瓜寮步道</a>
+                            </div>
+                        </article>
+
+                        <article class="feature-card" data-reveal>
+                            <figure class="card-photo">
+                                <div class="card-photo__media">
+                                    <img class="card-photo__image" src="./assets/images/photos/suspension_bridge.jpg" alt="坪林親水吊橋實地照片" loading="lazy">
+                                    <span class="card-photo__label">溪岸消暑</span>
+                                </div>
+                                <figcaption class="card-photo__caption">圖：lienyuan lee / Wikimedia Commons，CC BY 3.0。</figcaption>
+                            </figure>
+                            <p class="feature-card__index">暑</p>
+                            <h3>溪岸消暑</h3>
+                            <p>
+                                盛夏時節，坪林溪谷的水溫與林蔭可有效降低體感溫度，是雙北地區熱門的天然避暑選擇。建議沿觀魚步道漫步北勢溪畔，欣賞護魚成果下的大量溪魚生態，午後可至溪畔景觀咖啡廳歇息，品嚐當地特色的冷泡包種茶。
+                            </p>
+                            <p class="feature-card__best-time">☀️ 最佳造訪：6 月至 8 月（避暑消暫）</p>
+                            <ul class="feature-card__itinerary">
+                                <li><span class="step-num">1</span>上午沿觀魚步道漫步，欣賞北勢溪清澈水色與溪魚生態</li>
+                                <li><span class="step-num">2</span>中午至溪畔景觀咖啡廳休憩，品嚐冷泡包種茶與茶飲</li>
+                                <li><span class="step-num">3</span>下午轉往金瓜寮溪畔或老街散策，享受山風與林蔭</li>
+                            </ul>
+                            <div class="feature-card__itinerary-pills">
+                                <a class="pill-link" href="./fish-viewing-trail.html">觀魚步道</a>
+                                <a class="pill-link" href="./cafes.html">在地咖啡廳</a>
+                                <a class="pill-link" href="./jingualiao-trail.html">金瓜寮步道</a>
+                            </div>
+                        </article>
+
+                        <article class="feature-card" data-reveal>
+                            <figure class="card-photo">
+                                <div class="card-photo__media">
+                                    <img class="card-photo__image" src="./assets/images/photos/tea_plantation.jpg" alt="坪林山谷市區輪廓實拍照片" loading="lazy">
+                                    <span class="card-photo__label">山谷低霧</span>
+                                </div>
+                                <figcaption class="card-photo__caption">圖：lienyuan lee / Wikimedia Commons，CC BY 3.0。</figcaption>
+                            </figure>
+                            <p class="feature-card__index">冬</p>
+                            <h3>山谷低霧</h3>
+                            <p>
+                                秋冬季節，坪林山谷經常出現低海拔雲霧繚繞的壯麗景觀，層疊的茶園在晨霧中若隱若現，宛如流動的水墨畫卷。此時也是品嚐冬茶與蜜香紅茶的理想時節，在寧靜的茶園山景中，體會山城獨有的沉靜氛圍。
+                            </p>
+                            <p class="feature-card__best-time">☁️ 最佳造訪：11 月至翌年 2 月（雲霧茶園季）</p>
+                            <ul class="feature-card__itinerary">
+                                <li><span class="step-num">1</span>清晨早起抵達坪林，欣賞山谷雲霧與茶園晨景</li>
+                                <li><span class="step-num">2</span>上午至茶業博物館參觀，感受室內的宁靜與精緻展覽</li>
+                                <li><span class="step-num">3</span>下午在老街茶行品飲熱茶與蜜香紅茶，阿婆飲健行歸程</li>
+                            </ul>
+                            <div class="feature-card__itinerary-pills">
+                                <a class="pill-link" href="./tea-museum.html">茶業博物館</a>
+                                <a class="pill-link" href="./old-street.html">坪林老街</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 賞螢守則與生態倡議 -->
+            <section class="section">
+                <div class="container content-grid">
+                    <article class="content-card">
+                        <p class="section-label">生態倡議</p>
+                        <h2>夏夜賞螢的三大守則</h2>
+                        <ul class="content-list">
+                            <li>
+                                <strong>不喧嘩、不捕捉、不直射</strong>
+                                <p>螢火蟲對光線與噪音極為敏感。請保持安靜，嚴禁動手捉螢火蟲，溫柔守護美麗的自然精靈。</p>
+                            </li>
+                            <li>
+                                <strong>包裹紅色玻璃紙</strong>
+                                <p>若需使用手電筒照明路面，必須使用紅色玻璃紙包裹燈源。紅色光波能大幅降低對螢火蟲交配繁殖的干擾。</p>
+                            </li>
+                            <li>
+                                <strong>尊重自然，足跡不留痕</strong>
+                                <p>請沿著規劃妥當的步道石板路行走，嚴禁跨越護欄步入草叢，不留下任何垃圾，帶走滿滿的奇幻回憶。</p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="content-card">
+                        <p class="section-label">旅人計畫</p>
+                        <h2>出發！繪製屬於您的茶鄉漫遊日誌</h2>
+                        <p>
+                            不論您今天渴望的是一次老街歷史的探尋、一趟溪谷森林的療癒健行，還是一杯在茶山環繞下的午茶靜謐，坪林都將以它獨有的溫柔與清香，包容您所有的都市疲憊。準備好了嗎？
+                        </p>
+                        <div class="content-actions">
+                            <a class="button button--primary" href="./tea.html">探索茶業文化</a>
+                            <a class="button button--secondary" href="./game.html">夜色觀察體驗</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer" data-site-footer>
+            <div class="footer-card">
+                <div class="footer-card__disclaimer">本網站僅為個人網頁程式開發練習用，非坪林區官方網站。</div>
+            </div>
+        </footer>
+    </div>
+
+    <noscript>
+        <div class="noscript-note">此網站需要共用瀏覽腳本，請啟用 JavaScript 以獲得完整體驗。</div>
+    </noscript>
+</body>
+</html>

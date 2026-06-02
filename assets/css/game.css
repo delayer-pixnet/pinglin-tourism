@@ -1,0 +1,281 @@
+/* 遊戲頁背景：用較深的色調營造夜間賞螢氛圍。 */
+.site-shell--game {
+    background:
+    radial-gradient(circle at 15% 18%, rgba(145, 184, 109, 0.14), transparent 20%),
+    radial-gradient(circle at 85% 10%, rgba(95, 151, 170, 0.18), transparent 24%),
+    linear-gradient(180deg, rgba(9, 20, 17, 0.08), transparent 28%);
+}
+
+.game-layout {
+    padding-top: 1rem;
+}
+
+/* 主版面：左側資訊面板，右側遊戲舞台。 */
+.game-layout__grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+    gap: 1.4rem;
+    align-items: start;
+}
+
+.game-panel {
+    position: sticky;
+    top: 7rem;
+}
+
+.game-panel__stats {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.game-panel__stats article {
+    padding: 1rem;
+    border-radius: var(--radius-medium);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(248, 244, 236, 0.74));
+    border: 1px solid rgba(24, 49, 40, 0.1);
+    box-shadow: var(--shadow-card);
+}
+
+.game-panel__label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.85rem;
+    color: var(--color-ink-soft);
+}
+
+.game-panel__stats strong {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+}
+
+.game-panel__controls {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.game-panel__status,
+.game-panel__tip {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius-medium);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(248, 244, 236, 0.7));
+    border: 1px solid rgba(24, 49, 40, 0.08);
+    box-shadow: var(--shadow-card);
+}
+
+.game-panel__status {
+    min-height: 7rem;
+}
+
+.game-stage-card {
+    padding: 1.25rem;
+}
+
+.game-stage-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stage-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(95, 151, 170, 0.14);
+    border: 1px solid rgba(95, 151, 170, 0.16);
+    color: var(--color-river);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+/* 遊戲舞台：保留足夠空間讓螢火蟲在區域內隨機生成。 */
+.game-stage {
+    position: relative;
+    min-height: 28rem;
+    border-radius: calc(var(--radius-large) - 4px);
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 10%, rgba(145, 184, 109, 0.15), transparent 45%),
+        radial-gradient(circle at 15% 85%, rgba(95, 151, 170, 0.25), transparent 35%),
+        linear-gradient(180deg, #09120e 0%, #0d1e16 60%, #153124 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 24px 46px rgba(8, 18, 15, 0.22);
+    transition: box-shadow 260ms ease, transform 260ms ease;
+}
+
+.game-stage.is-starting {
+    animation: stage-pulse 760ms ease-out;
+}
+
+.game-stage::before,
+.game-stage::after {
+    content: "";
+    position: absolute;
+    inset: auto;
+    pointer-events: none;
+}
+
+.game-stage::before {
+    left: -8%;
+    bottom: -18%;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(145, 184, 109, 0.18), transparent 75%);
+}
+
+.game-stage::after {
+    right: -10%;
+    top: -12%;
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(95, 151, 170, 0.18), transparent 75%);
+}
+
+.game-stage__hint,
+.game-stage__result {
+    position: absolute;
+    inset: 1.25rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #eefbf2;
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    border-radius: calc(var(--radius-large) - 8px);
+    background: rgba(6, 16, 13, 0.22);
+    padding: 1rem;
+}
+
+.game-stage__hint strong,
+.game-stage__result strong {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+}
+
+/* 螢火蟲按鈕：用純 CSS 做出發光點擊目標。 */
+.firefly {
+    position: absolute;
+    width: 3.6rem;
+    height: 3.6rem;
+    border: none;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 38% 35%, rgba(255, 255, 255, 0.95), rgba(247, 213, 141, 0.86) 36%, rgba(145, 184, 109, 0.6) 68%, rgba(145, 184, 109, 0) 76%),
+        radial-gradient(circle, rgba(247, 213, 141, 0.32), transparent 62%);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.1),
+        0 0 18px rgba(247, 213, 141, 0.55),
+        0 0 36px rgba(145, 184, 109, 0.4);
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    animation: firefly-pop 1.2s ease forwards;
+}
+
+.firefly:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+    filter: brightness(1.08);
+}
+
+.firefly::after {
+    content: "";
+    position: absolute;
+    inset: 30% 32%;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.firefly.is-caught {
+    animation: firefly-caught 280ms ease forwards;
+}
+
+@keyframes firefly-pop {
+    0% {
+        transform: translate(-50%, -50%) scale(0.4);
+        opacity: 0;
+    }
+    18% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.92;
+    }
+}
+
+@keyframes firefly-caught {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.92;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1.45);
+        opacity: 0;
+    }
+}
+
+@keyframes stage-pulse {
+    0% {
+        transform: scale(0.996);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 24px 46px rgba(8, 18, 15, 0.22);
+    }
+    28% {
+        transform: scale(1);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 0 0 2px rgba(247, 213, 141, 0.22), 0 30px 58px rgba(8, 18, 15, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 24px 46px rgba(8, 18, 15, 0.22);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .game-stage.is-starting {
+        animation: none;
+    }
+
+    .firefly,
+    .firefly.is-caught {
+        animation: none;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@media (max-width: 960px) {
+    .game-layout__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-panel {
+        position: static;
+    }
+
+    .game-stage {
+        min-height: 24rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .game-stage-card__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .game-stage {
+        min-height: 22rem;
+    }
+
+    .firefly {
+        width: 3.1rem;
+        height: 3.1rem;
+    }
+}
+

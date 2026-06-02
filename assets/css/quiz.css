@@ -1,0 +1,347 @@
+/* ==========================================================================
+   茶學知識問答專屬樣式表 (quiz.css)
+   ========================================================================== */
+
+/* 獨立問答頁背景：磨砂漸層，帶有翠綠與溪水藍色調，呼應山水茶鄉主題。 */
+.site-shell--quiz {
+    background:
+        radial-gradient(circle at 10% 15%, rgba(145, 184, 109, 0.16), transparent 30%),
+        radial-gradient(circle at 85% 85%, rgba(95, 151, 170, 0.18), transparent 30%),
+        linear-gradient(180deg, rgba(24, 49, 40, 0.05), transparent 40%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 主版面 */
+.quiz-layout {
+    padding: 2.5rem 0 4.5rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* 問答主卡片：極緻玻璃磨砂玻璃樣式，保證層次感與易讀性 */
+.quiz-card {
+    position: relative;
+    max-width: 44rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: var(--radius-large);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(248, 244, 236, 0.9));
+    border: 1px solid rgba(24, 49, 40, 0.1);
+    box-shadow: 0 24px 64px rgba(18, 39, 31, 0.12);
+    backdrop-filter: blur(16px);
+    overflow: hidden;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.quiz-card::before {
+    content: "";
+    position: absolute;
+    inset: 1px 1px auto 1px;
+    height: 30%;
+    border-radius: inherit;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+/* 卡片上方進度列 */
+.quiz-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-progress-info {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-ink-soft);
+}
+
+.quiz-bar-container {
+    flex: 1;
+    height: 6px;
+    background: rgba(24, 49, 40, 0.08);
+    border-radius: 99px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-bar-fill {
+    height: 100%;
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--color-tea), var(--color-river));
+    width: 0%;
+    transition: width 380ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.quiz-score-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    background: rgba(247, 213, 141, 0.15);
+    border: 1px solid rgba(247, 213, 141, 0.28);
+    color: var(--color-ink);
+    font-weight: 700;
+    border-radius: 999px;
+    font-size: 0.88rem;
+}
+
+/* 題目類別與主文字 */
+.quiz-meta-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.75rem;
+    background: rgba(36, 83, 58, 0.08);
+    border: 1px solid rgba(36, 83, 58, 0.1);
+    color: var(--color-tea-deep);
+    border-radius: 99px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+}
+
+.quiz-question-text {
+    margin: 0 0 1.6rem;
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    line-height: 1.45;
+    font-weight: 700;
+    color: var(--color-ink);
+}
+
+/* 選項按鈕列表 */
+.quiz-options-list {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 1.6rem;
+}
+
+.quiz-opt-btn {
+    appearance: none;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 1.5px solid rgba(24, 49, 40, 0.08);
+    border-radius: var(--radius-medium);
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--color-ink);
+    font-size: 1.02rem;
+    font-weight: 550;
+    text-align: left;
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+    box-shadow: 0 4px 10px rgba(18, 39, 31, 0.02);
+}
+
+.quiz-opt-btn:hover:not(:disabled) {
+    background: #fff;
+    border-color: var(--color-tea);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(36, 83, 58, 0.08);
+}
+
+.quiz-opt-btn:disabled {
+    cursor: default;
+    opacity: 0.85;
+}
+
+/* 選項答題回饋狀態 */
+.quiz-opt-btn.is-correct-ans {
+    background: #effaf3 !important;
+    border-color: rgba(145, 184, 109, 0.8) !important;
+    color: #1a4a25 !important;
+    box-shadow: 0 6px 16px rgba(145, 184, 109, 0.16) !important;
+    font-weight: 700;
+}
+
+.quiz-opt-btn.is-wrong-ans {
+    background: #faf2f2 !important;
+    border-color: rgba(220, 100, 100, 0.6) !important;
+    color: #5c2020 !important;
+    box-shadow: 0 6px 16px rgba(220, 100, 100, 0.08) !important;
+    font-weight: 700;
+}
+
+/* 解析面板 */
+.quiz-explain-card {
+    margin: 0 0 1.6rem;
+    padding: 1.1rem 1.35rem;
+    border-radius: var(--radius-medium);
+    background: linear-gradient(135deg, rgba(247, 213, 141, 0.08), rgba(220, 235, 180, 0.06));
+    border: 1px solid rgba(247, 213, 141, 0.22);
+    font-size: 0.94rem;
+    line-height: 1.6;
+    color: var(--color-ink-soft);
+    animation: explain-slide-up 320ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.quiz-explain-card strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.98rem;
+}
+
+.quiz-explain-card.correct-feedback strong {
+    color: #1e5a2c;
+}
+
+.quiz-explain-card.wrong-feedback strong {
+    color: #7a2626;
+}
+
+@keyframes explain-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 卡片下方動作列 */
+.quiz-action-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 1px solid rgba(24, 49, 40, 0.08);
+    padding-top: 1.4rem;
+}
+
+.quiz-next-action-btn {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, var(--color-tea-deep), var(--color-tea));
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.98rem;
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+    box-shadow: 0 10px 24px rgba(36, 83, 58, 0.2);
+}
+
+.quiz-next-action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(36, 83, 58, 0.28);
+}
+
+.quiz-next-action-btn:active {
+    transform: translateY(-1px);
+}
+
+/* 答題結果面板 */
+.quiz-result-view {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.quiz-grade-score {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 0 0 0.5rem;
+    background: linear-gradient(135deg, var(--color-tea-deep), var(--color-river));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.quiz-result-tag {
+    display: inline-block;
+    padding: 0.45rem 1.1rem;
+    background: rgba(247, 213, 141, 0.15);
+    border: 1.5px solid rgba(247, 213, 141, 0.35);
+    color: #6a4918;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 99px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 6px 14px rgba(247, 213, 141, 0.08);
+}
+
+.quiz-result-intro {
+    font-size: 1.08rem;
+    line-height: 1.65;
+    color: var(--color-ink);
+    margin: 0 auto 1.8rem;
+    max-width: 32rem;
+}
+
+.quiz-result-recommendation {
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius-large);
+    background: rgba(36, 83, 58, 0.04);
+    border: 1px dashed rgba(36, 83, 58, 0.15);
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.quiz-result-recommendation strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--color-tea-deep);
+    margin-bottom: 0.5rem;
+}
+
+.quiz-result-recommendation p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--color-ink-soft);
+}
+
+/* 重新挑戰按鈕列 */
+.quiz-result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* 響應式微調 */
+@media (max-width: 640px) {
+    .quiz-card {
+        padding: 1.5rem;
+    }
+    
+    .quiz-header-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    
+    .quiz-progress-info {
+        text-align: center;
+    }
+    
+    .quiz-score-badge {
+        justify-content: center;
+    }
+    
+    .quiz-question-text {
+        font-size: 1.2rem;
+    }
+    
+    .quiz-opt-btn {
+        padding: 0.85rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .quiz-result-actions .button {
+        width: 100%;
+    }
+}
