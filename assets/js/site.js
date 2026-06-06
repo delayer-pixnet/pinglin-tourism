@@ -337,4 +337,17 @@
     initHeaderScrollState();
     initScrollReveal();
     initHomeSeasonSwitch();
+
+    // GTM dataLayer：重點頁面瀏覽事件推送。
+    // 當使用者進入指定的高價值頁面時，透過 dataLayer 通知 GTM 觸發 view_key_page 事件，
+    // 供 GA4 記錄重點景點頁的瀏覽深度與頻率。
+    const keyPages = ["tea-museum", "old-street", "fish-viewing-trail", "transport", "cafes"];
+    if (keyPages.includes(pageKey)) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: "view_key_page",
+            page_key: pageKey,
+            page_title: document.title
+        });
+    }
 })();
